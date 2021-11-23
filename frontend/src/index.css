@@ -1,13 +1,66 @@
-body {
+html *{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.main{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+ 
+  background-position-y: -10rem;
+  
+}
+
+.pagina{
+  background-image: url("./components/assets/img/backgound.jpg.jpg");
+
+}
+.user{
+  margin: 0%;
+  padding: 0%;
+  width: 5% !important;
+}
+.navbar{
+  position:fixed;
+}
+.boton-user{
+padding: 0%;
+
+}
+.diapositiva{
+  display: flex;
+  flex-direction: column;
+}
+.img-diapositiva{
+  margin: 2rem;
+}
+.carrusel-inner{
+  
+  display: flex;
+}
+.logo-carrusel{
+  width: 96%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+.logo-carru {
+  width: 100%;
+  height: auto;
+  }
+.btn{
+  margin: 3rem;
+  font-size: 30pt !important;
+}
+.carousel{
+  margin: 5rem;
+  
+}
+.carousel-title{
+  font-weight: bold;
+  text-align: center;
+  font-size: 25pt;
+  font-family: 'Josefin Sans', sans-serif;
 }
