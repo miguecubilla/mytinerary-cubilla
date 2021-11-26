@@ -1,0 +1,38 @@
+{
+  "dependencies": {
+    "axios": "^0.24.0",
+    "bootstrap": "^5.1.3",
+    "bootstrap-4-react": "^0.0.59",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "react-bootstrap": "^2.0.2",
+    "react-native": "^0.66.3",
+    "react-router": "^6.0.2",
+    "react-router-dom": "^6.0.2",
+    "reactstrap": "^9.0.1",
+    "slick": "^1.12.2"
+  },
+  "name": "mytinerary-cubilla",
+  "version": "1.0.0",
+  "description": "\"mitinerary project\"",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miguecubilla/mytinerary.git"
+  },
+  "keywords": [
+    "tinerary",
+    "react",
+    "mongo"
+  ],
+  "author": "miguel cubilla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/miguecubilla/mytinerary/issues"
+  },
+  "homepage": "https://github.com/miguecubilla/mytinerary#readme"
+}

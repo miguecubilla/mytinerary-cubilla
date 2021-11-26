@@ -1,17 +1,15 @@
 import React from 'react';
-import Header from '../components/header';
-import Main from '../components/main';
-import Footer from '../components/footer';
+import Main from '../components/main.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default class Home extends React.Component{
-    render(){
+
+ function Home(){
+    
         return(
             <div className="pagina">
-                <Header/>
                 <Main/>
-                <Footer/>
             </div>
         );
-    }
+
 }
+export default Home;
