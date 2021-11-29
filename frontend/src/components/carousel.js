@@ -37,8 +37,8 @@ export default class App extends Component {
       },
     {
         "id":5,
-        "name":"Isla de Pascua",
-        "image":"https://images.pexels.com/photos/2819082/pexels-photo-2819082.jpeg?cs=srgb&dl=pexels-andrea-vera-sasso-2819082.jpg&fm=jpg",
+        "name":"Santiago de Chile",
+        "image":"https://th.bing.com/th/id/R.61118a4e2451544ce3e645a5131c11c6?rik=i4vrqeyY%2b9BNVQ&riu=http%3a%2f%2f5b0988e595225.cdn.sohucs.com%2fimages%2f20171205%2feaca2a8eff654956a85de24c1447c2f4.jpeg&ehk=meVYj3DOFHSsdB68CLcAmAWVvNaDr%2f%2fwCzQGbDtQf%2bk%3d&risl=&pid=ImgRaw&r=0",
         "zona":"america",
       },
     {
@@ -49,8 +49,8 @@ export default class App extends Component {
       },
     {
         "id":7,
-        "name":"Machu Pichu",
-        "image":"https://images.pexels.com/photos/5503236/pexels-photo-5503236.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+        "name":"Mendoza",
+        "image":"https://www.borispatagonia.com/images/mendoza-argentine-vignobles.jpg",
         "zona":"america",
       },
     {
@@ -73,13 +73,13 @@ export default class App extends Component {
       },
     {
         "id":11,
-        "name":"Londres",
+        "name":"London",
         "image":"https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg?cs=srgb&dl=pexels-pixabay-460672.jpg&fm=jpg",
         "zona":"europa",
       },
     {
         "id":12,
-        "name":"Roma",
+        "name":"Rome",
         "image":"https://images.pexels.com/photos/2676582/pexels-photo-2676582.jpeg?cs=srgb&dl=pexels-griffin-wooldridge-2676582.jpg&fm=jpg",
         "zona":"europa",
       },

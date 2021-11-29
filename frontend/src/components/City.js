@@ -2,7 +2,7 @@ import React, {useEffect,useState} from 'react';
 import { useParams } from 'react-router';
 import axios from 'axios';
 import {Link} from 'react-router-dom';
-import { Card, Button } from 'bootstrap-4-react/lib/components';
+import { Card, Button, Alert } from 'bootstrap-4-react/lib/components';
 
 
 
@@ -31,7 +31,7 @@ export const City = () => {
             })
             }
             <Link to="/cities"><Button secondary lg>Back to cities</Button></Link>
-            <h1>Under Construction</h1>
+            <Alert warning><h2>UNDER CONSTRUCTION</h2></Alert>
         </div>              
     )
 }
