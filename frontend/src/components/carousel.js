@@ -87,7 +87,7 @@ export default class App extends Component {
 }
 }
 
-  componentWillMount() {
+  componentDidMount() {
     window.setTimeout(() => Bootstrap.carousel('#carouselExampleControls'), 20);
   }
 
