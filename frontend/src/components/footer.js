@@ -20,7 +20,7 @@ function Footer() {
           </li>
         </ul>
       <div> 
-        <img width="30" padding="3" src={Facebook} />
+        <img width="30" src={Facebook} />
         <img width="30" src={Twitter} />
         <img width="30" src={Instagram} />
       </div>
