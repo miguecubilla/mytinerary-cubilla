@@ -1,16 +1,16 @@
 const initialState = {
-    itinerary:[],
+    itinerary: [],
 }
 
 const itineraryReducer = (state = initialState, action) => {
-    switch (action.type){
+    switch (action.type) {
         case 'GET_ITINERARY':
             return {
                 ...state,
-                itineraryByCity : action.payload
+                itinerary: action.payload.respuesta,
             }
-        default : 
-        return state
+        default:
+            return state
     }
 }
-export default itineraryReducer 
+export default itineraryReducer

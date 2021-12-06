@@ -1,4 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel'
+import { Card } from 'react-bootstrap';
 
 function CarruselPopular() {
     var cities = [
@@ -76,51 +77,44 @@ function CarruselPopular() {
         },
     ]
     return (
+        <div>
 
-        <Carousel className="carouselMain">
-            <Carousel.Item  interval={6000}>
-                {cities.filter(element => {
-                    return element.zona == "eeuu"
-                })
-                    .map((element) => (
-                        <div class="card 1">
-                            <div class="card_image"> <img src={element.image} /> </div>
-                            <div class="card_title title-white">
-                                <p>{element.name}</p>
+            <Carousel >
+                <Carousel.Item interval={6000}>
+                    {cities.filter(element => {
+                        return element.zona == "eeuu"
+                    })
+                        .map(element => (
+                            <div className="logo1" width="10%">
+                                <img className="logo1cont" width="5%" src={element.image} />
                             </div>
-                        </div>
-                    ))}
-            
-            </Carousel.Item>
-            <Carousel.Item  interval={6000}>
-                {cities.filter(element => {
-                    return element.zona == "europa"
-                })
-                    .map((element) => (
-                        <div class="card 1">
-                            <div class="card_image"> <img src={element.image} /> </div>
-                            <div class="card_title title-white">
-                                <p>{element.name}</p>
-                            </div>
-                        </div>
-                    ))}
+                        ))}
 
-            </Carousel.Item>
-            <Carousel.Item className="carruu" interval={6000}>
-                {cities.filter(element => {
-                    return element.zona == "america"
-                })
-                    .map((element) => (
-                        <div class="card 1">
-                            <div class="card_image"> <img src={element.image} /> </div>
-                            <div class="card_title title-white">
-                                <p>{element.name}</p>
+                </Carousel.Item>
+                <Carousel.Item interval={6000}>
+                    {cities.filter(element => {
+                        return element.zona == "europa"
+                    })
+                        .map((element) => (
+                            <div className="logo1" width="10%">
+                                <img className="logo1cont" width="5%" src={element.image} />
                             </div>
-                        </div>
-                    ))}
+                        ))}
 
-            </Carousel.Item>
-        </Carousel>
+                </Carousel.Item>
+                <Carousel.Item className="carruu" interval={6000}>
+                    {cities.filter(element => {
+                        return element.zona == "america"
+                    })
+                        .map((element) => (
+                            <div className="logo1" width="10%">
+                                <img className="logo1cont" width="5%" src={element.image} />
+                            </div>
+                        ))}
+
+                </Carousel.Item>
+            </Carousel>
+        </div>
     )
 }
 

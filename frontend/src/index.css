@@ -4,12 +4,14 @@ html *{
   box-sizing: border-box;
   font-family: 'Josefin Sans', sans-serif;;
 }
-
-/* display: flex;
+.pagina{
+  background-color: cornflowerblue;
+}
 .main{
+  display: flex;
   align-items: center;
   flex-direction: column; 
-}*/
+}
 
 
 .user{
@@ -23,6 +25,12 @@ html *{
 .boton-user{
 padding: 0%;
 
+}
+
+.ContainerInput{
+
+  margin: 5rem;
+  border-radius: 4rem;
 }
 .diapositiva{
   display: flex;
@@ -44,36 +52,43 @@ padding: 0%;
   width: 100%;
   height: auto;
   }
-.btn{
-  margin: 3rem;
-  font-size: 30pt !important;
+.homemain2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .carousel{
-  margin: 5rem;
+  margin: 0.5rem;
   
+}
+.card-img-top{
+  width: 25px;
+  height: 200px;
 }
 .carousel-title{
   font-weight: bold;
   text-align: center;
-  font-size: 25pt;
+  font-size: 18pt;
+  margin: 0% !important;
   font-family: 'Josefin Sans', sans-serif;
+}
+.user-logo{
+  border: 0% !important;
+  padding: 0% !important;
 }
 .headerContainer{
   display:flex;
   flex-direction:column;
-  background-image: url("./components/assets/img/fondoHeader1.jpg");
-  
+  background-color:cornflowerblue ;
   background-position-x: center;
   background-position-y: center;
-  height: 70vh;
-  background-color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   font-size: 20pt !important;
-  height: 50vh;
+  
 }
-.logoAndCall{
-display: flex;
-flex-direction: row;
-height: 15rem;
+#carouselExampleControls{
+  padding: 12%;
 
 }
 .headerMain{
@@ -82,159 +97,31 @@ height: 15rem;
   justify-content: space-between;
   width: 100%;
   position: fixed;
-  
-  
 }
-.containerLink {
-  font-family: 'Titillium Web';
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 600;
+.main{
+  background-image: url("./components/assets/img/fondoMain.jpg");
+  background-position-x: center;
+  background-position-y: center;
 }
-
-.containerLink * {
-  
- 
-  box-sizing: border-box;
-  transition: all .35s ease;
-}
-
-.nav-auto{
-  margin: 0% !important;
-  padding: 0% !important;
-}
-.containerLink .me-auto {
-  display: flex;
-  flex-direction: row;
-  list-style: outside none none;
-  margin: 1rem 1rem;
-  padding: 0rem;
-}
-
-.containerLink .buttonNav {
-  padding: .5em .8em;
-  color: rgba(255,255,255,.5);
-  position: relative;
-  text-decoration: none;
-  font-size: 20px;
-}
-
-.containerLink .buttonNav::before,
-.containerLink .buttonNav::after {
-  content: '';
-  height: 14px;
-  width: 14px;
-  position: absolute;
-  transition: all .35s ease;
-  opacity: 0;
-}
-
-.containerLinka::before {
-  content: '';
-  right: 0;
-  top: 0;
-  border-top: 3px solid #ffffff;
-  border-right: 3px solid #b1b3af;
-  transform: translate(-100%, 50%);
-}
-
-.containerLink .buttonNav:after {
-  content: '';
-  left: 0;
-  bottom: 0;
-  border-bottom: 3px solid #b1b3af;
-  border-left: 3px solid #ffffff;
-  transform: translate(100%, -50%)
-}
-
-
-Nav .buttonNav:hover:before,
-Nav .buttonNav:hover:after{
-  transform: translate(0,0);
-  opacity: 1;
-}
-
-Nav .buttonNav:hover {
-  color: #ffffff;
+.container-fluid{
+  background-image: url("./components/assets/img/fondoMain.jpg");
+  background-position-x: center;
+  background-position-y: center;
 }
 .logo1cont{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width:50%;
+  width: 30%;
+  height: auto;
 }
 .logo1{
-  padding:0%;
-  margin: 0%;
-  width: 100%;
-  
-}
-.glow-on-hover {
-  width: 440px;
-  height: 100px;
-  border: none;
-  outline: none;
-  color: rgb(66, 64, 196);
-  background: #111;
-  cursor: pointer;
-  position:sticky;
-  z-index: 0;
-  border-radius: 10px;
-  margin: 10rem;
-  font-size: 30pt;
-  font-style: bold;
-  margin-top: 7rem;
+  width: 96%;
+  max-width: 960px;
+  margin: 0 auto;
   
 }
 
-.glow-on-hover:before {
-  content: '';
-  background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
-  position: absolute;
-  top: -2px;
-  left:-2px;
-  background-size: 400%;
-  z-index: -1;
-  filter: blur(5px);
-  width: calc(100% + 4px);
-  height: calc(100% + 4px);
-  animation: glowing 20s linear infinite;
-  opacity: 0;
-  transition: opacity .3s ease-in-out;
-  border-radius: 10px;
-}
-
-.glow-on-hover:active {
-  color: #111;
-}
-
-.glow-on-hover:active:after {
-  background: transparent;
-}
-
-.glow-on-hover:hover:before {
-  opacity: 1;
-}
-
-.glow-on-hover:after {
-  z-index: -1;
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  left: 0;
-  top: 0;
-  border-radius: 10px;
-}
-
-@keyframes glowing {
-  0% { background-position: 0 0; }
-  50% { background-position: 400% 0; }
-  100% { background-position: 0 0; }
-}
-.carruselMain{
-  
+.carouselMain{
+  display:flex;
+  flex-direction: row;
   padding: 0% !important;
   margin: 0% !important;
   border: 0% !important;
@@ -243,16 +130,11 @@ Nav .buttonNav:hover {
 .d-block{
   height: 10% !important;
 }
-.card {
-  margin: 30px auto;
-  width: 300px;
-  height: 300px;
-  border-radius: 40px;
-box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-  cursor: pointer;
-  transition: 0.4s;
-}
 
+.btn{
+  width: 20rem !important;
+  height: 5rem !important;
+}
 .card .card_image {
   width: inherit;
   height: inherit;
@@ -291,25 +173,12 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
 }
 
 .card-list {
-  /* On small screens, we are no longer using row direction but column */
   flex-direction: column;
 }
 @media all and (max-width: 500px) {
   
 }
-.card {
-  margin: 30px auto;
-  width: 900px;
-  height: 300px;
-  border-radius: 40px;
-  background:transparent;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-repeat: no-repeat;
-box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.22);
-  transition: 0.4s;
-}
+
 .carousel-control-next{
   filter:invert() !important;
   
@@ -317,4 +186,33 @@ box-shadow: 5px 5px 30px 7px rgba(0,0,0,0.25), -5px -5px 30px 7px rgba(0,0,0,0.2
 .carousel-control-prev{
   filter:invert() !important;
   
+}
+.imgCity{
+  margin: 1rem;
+  width: 50%;
+  height: 50%;
+  border-radius: 10%;
+  border-color: white;
+}
+.cardCity{
+  color: white;
+}
+.text-center{
+  width: 100% !important;
+  height: 30% !important;
+  margin: 0.8rem !important;
+
+}
+.imgCity2{
+  margin: 1rem;
+  width: 20%;
+  height: 10%;
+  border-radius: 10%;
+  border-color: white;
+}
+.backCities{
+  margin: 1.5rem;
+}
+.logoUser{
+  width: 50vw;
 }

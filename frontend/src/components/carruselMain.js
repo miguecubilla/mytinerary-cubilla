@@ -6,7 +6,7 @@ import Promo3 from './assets/img/promo3.jpg'
  function CarruselMain(){
     return(
 
-        <Carousel  className="carruselMain">
+        <Carousel  className="carouselMain">
           <Carousel.Item  interval={6000}>
             <img
               className="d-block w-100 h-50"

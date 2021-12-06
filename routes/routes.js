@@ -20,9 +20,9 @@ Router.route('/itineraries')
     .get(getItineraries)
     .post(postItinerary)
 
-Router.route('/itineraries/:id')
+Router.route('/city/itineraries/:id')
     .get(getItineraryCity)
-    .delete(deleteItinerary)
+//    .delete(deleteItinerary)
     .put(modificarUnItinerary)
 
 Router.route('/itinerary/:id')

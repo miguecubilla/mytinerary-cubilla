@@ -5,32 +5,35 @@ import { Link } from 'react-router-dom';
 import { Card, Alert } from 'bootstrap-4-react/lib/components';
 import { connect } from 'react-redux'
 import citiesActions from "../redux/actions/citiesAction.js";
+import Logo1 from '../components/assets/img/logo1.png'
+import Logo2 from '../components/assets/img/tinerary.png'
+
 
 function Cities(props) {
-  
-  //fetcheo de la api
+
   useEffect(() => {
     props.arrayCities()
   }, [])
 
-  const auxCities =props.tableCities;
-  const filtrar=props.filter
+  const auxCities = props.tableCities;
+  const filtrar = props.filter
 
   return (
     <div className="container-fluid">
+      <div className="logo1" >
+        <img className="logo1cont" src={Logo1} />
+        <img className="logo1cont" src={Logo2} />
+      </div>
       <div className="ContainerInput">
-        /*input que captura informacion y lo envia a la funcion "handlechange" */
         <Input
           className="FormControl inputBuscar"
-          placeholder="Search For Name"
+          placeholder="Search a City For Name"
           onChange={(evento) => filtrar(auxCities, evento.target.value)} />
       </div>
-      <h1>Cities</h1>
       {props.setTableCities.length > 0 ? props.setTableCities.map((city) => <Card display="inline-block" align="top" ml="4" mr="1" p="3" style={{ width: '20rem' }}>
         <Link to={`/city/${city._id}`}>
           <Card.Image src={city.image} top />
         </Link>
-                /*trajetas de ciudades */
         <Card.Body>
           <Card.Text>
             <h4>{city.name}</h4>

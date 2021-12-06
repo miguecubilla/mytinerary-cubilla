@@ -29,7 +29,7 @@ getItineraries: async (req, res) => {
   getItineraryCity: async (req, res) => {
     const cityId = (req.params.id)
     try {
-      const selectedCityItineraries = await Itinerary.find({ cityID: cityId })
+      const selectedCityItineraries = await Itinerary.find({ CityID: cityId })
       if (selectedCityItineraries.length != 0) {
         res.json({ success: true, respuesta: selectedCityItineraries });
       } else {
@@ -42,7 +42,7 @@ getItineraries: async (req, res) => {
   },
     postItinerary:(req,res)=>{
       const {name , lastName, personImage, price,duration, hashtags, CityID, likes, comment} = req.body
-      new Itinerary({name , lastName, personImage, price,duration, hashtags, CityID, likes, comment}).save()
+        new Itinerary({name , lastName, personImage, price,duration, hashtags, CityID, likes, comment}).save()
       .then((respuesta) => res.json({respuesta}))
   },
     
