@@ -29,7 +29,7 @@ const App = (props) => {
         <Route path="/" element={<Home />} />
         <Route path="/Cities" element={<Cities />} />
         <Route path="/city/:id" element={<City />} />
-        {props.user.pepe ? (<Route path="*" element={<Home />} />) : (<><Route path="/register" element={<Register />} /> <Route path="/singin" element={<SingIn />} /> </>)}
+        {props.user ? (<Route path="*" element={<Home />} />) : (<><Route path="/register" element={<Register />} /> <Route path="/singin" element={<SingIn />} /> </>)}
       </Routes>
       <ToastContainer
         position="top-right"

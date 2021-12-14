@@ -12,8 +12,8 @@ import authActions from '../redux/actions/authActions';
 
 function NavBar(props) {
   console.log(props)
-  const logo = props.user.pepe
-  ? <img className='logoUser' src={props.user.pepe.urlImage} width="40vw" />
+  const logo = props.user.token
+  ? <img className='logoUser' src={props.user.urlImage} width="40vw" />
   : <img className='logoUser' src={user} width="40vw" />
   return (
 
@@ -31,7 +31,7 @@ function NavBar(props) {
 
            </div>
             <NavDropdown title={logo} id="collasible-nav-dropdown">
-            {props.user.pepe ? <NavDropdown.Item className="nav2" onClick={() => props.logOut()}>LogOut</NavDropdown.Item> : <><NavDropdown.Item className="nav2" as={Link} to={"/register"}>Sign Up</NavDropdown.Item><NavDropdown.Item className="nav2" as={Link} to={"/singin"}>Login</NavDropdown.Item></>}
+            {props.user ? <NavDropdown.Item className="nav2" onClick={() => props.logOut()}>LogOut</NavDropdown.Item> : <><NavDropdown.Item className="nav2" as={Link} to={"/register"}>Sign Up</NavDropdown.Item><NavDropdown.Item className="nav2" as={Link} to={"/singin"}>Login</NavDropdown.Item></>}
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>

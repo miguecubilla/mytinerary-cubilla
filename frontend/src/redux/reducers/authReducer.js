@@ -1,5 +1,5 @@
 const initialState = {
-    user: { email: '', urlImg: "", name: "", token: "" },
+    user: { email: '', urlImage: "", name: "", token: "" },
     errores: '',
 }
 
@@ -9,7 +9,7 @@ const authReducer = (state = initialState, action) => {
         case 'user':
             localStorage.setItem("token", action.payload.token)
             localStorage.setItem("name", action.payload.name)
-            localStorage.setItem("img", action.payload.urlImage)
+            localStorage.setItem("urlImage", action.payload.urlImage)
             return {
                 ...state,
                 user: action.payload

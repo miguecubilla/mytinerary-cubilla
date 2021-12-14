@@ -22,15 +22,20 @@ const authActions = {
     singIn: (userLogin) => {
         return async (dispatch, getState) => {
             try {
-
                 const user = await axios.post('http://localhost:4000/api/auth/signIn', { ...userLogin })
                 if (user.data.success && !user.data.error) {
-                    localStorage.setItem("token", user.data.response.token);
-                    dispatch({ type: 'user', payload: { pepe: user.data.response } })
+                    localStorage.setItem('token', user.data.response.token)
+                    dispatch({ type: 'user', payload: user.data.response })
                 } else {
-                    // alert(user.data.error)
-                    console.error(user.data.response)
-                    return { errores: user.data.errores };
+                    console.log(user.data)
+                    const error = user.data.error
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'error',
+                        title: error,
+                        showConfirmButton: true,
+                        timer: 1500
+                    })
                 }
             } catch (error) {
                 console.error(error)
@@ -45,24 +50,24 @@ const authActions = {
                 icon: 'success',
                 confirmButtonText: 'Cool'
             })
-            localStorage.removeItem('token')
             dispatch({ type: 'logOut', payload: {} })
+            localStorage.removeItem("token","userLogged")
         }
     },
     logInLS: (token) => {
         return async (dispatch, getState) => {
             try {
                 let response = await axios.get("http://localhost:4000/api/tokenVerification", {
-                headers: {
-                    Authorization: "Bearer "+ token
-                },
-                 })
-                dispatch({type: "user", payload: {token, name: response.data.name, urlImage: response.data.urlImage, _id: response.data._id}})
-         } catch (error) {
-            
-        } 
-    }
-},
+                    headers: {
+                        Authorization: "Bearer " + token
+                    },
+                })
+                dispatch({ type: "user", payload: { token, name: response.data.name, urlImage: response.data.urlImage, _id: response.data._id } })
+            } catch (error) {
+
+            }
+        }
+    },
 };
 
 module.exports = authActions
