@@ -247,97 +247,100 @@ html * {
   border-radius: 50%;
 
 }
-.FormSign{
-  
-  padding: 25px 25px 25px 25px;
+
+.FormSign {
+
+  padding   : 25px 25px 25px 25px;
   background: #fff;
-  box-shadow: 
-      0px 0px 0px 5px rgba( 255,255,255,0.4 ), 
-      0px 4px 20px rgba( 0,0,0,0.33 );
-  -moz-border-radius: 5px;
+  box-shadow:
+    0px 0px 0px 5px rgba(255, 255, 255, 0.4),
+    0px 4px 20px rgba(0, 0, 0, 0.33);
+  -moz-border-radius   : 5px;
   -webkit-border-radius: 5px;
-  border-radius: 5px;
-  display: table;
-  position: static;
+  border-radius        : 5px;
+  display              : table;
+  position             : static;
 }
-.containerform{
-  
-  width: 1000px;
-    max-width: 350px;
-    margin: 0 auto;
-    padding: 30px;
+
+.containerform {
+
+  width    : 1000px;
+  max-width: 350px;
+  margin   : 0 auto;
+  padding  : 30px;
 }
-.mainform{
- background-image: url('../src/components/assets/img/fondoform.jpg');
- background-position-x: center;
- background-position-y: center;
- background-size:unset;
- 
- height: 87vh;
- max-height: 89vh;
+
+.mainform {
+  background-image     : url('../src/components/assets/img/fondoform.jpg');
+  background-position-x: center;
+  background-position-y: center;
+  background-size      : unset;
+
+  height    : 87vh;
+  max-height: 89vh;
 }
-.headerform{
+
+.headerform {
   margin-bottom: 10px;
-  color: #333333;
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 5px;
+  color        : #333333;
+  font-size    : 24px;
+  font-weight  : bold;
+  margin-bottom: 5px;
 }
-.labelFormulario{
-  margin-top: 5px;
-  color: #8f8f8f;
-  font-size: 12px;
-  font-weight: 300;
+
+.labelFormulario {
+  margin-top    : 5px;
+  color         : #8f8f8f;
+  font-size     : 12px;
+  font-weight   : 300;
   letter-spacing: 1px;
-  margin-bottom: 7px;
-  display: block;
+  margin-bottom : 7px;
+  display       : block;
 }
-.submit{
-  width: 100%;
-    margin-top: 20px;
-    margin-bottom: 2px;
-    padding: 5px 0;
-    color: #fff;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    text-align: center;
-    text-decoration: none;
-        background: -moz-linear-gradient(
-        top,
-        #b9c5dd 0%,
-        #a4b0cb);
-    background: -webkit-gradient(
-        linear, left top, left bottom, 
-        from(#b9c5dd),
-        to(#a4b0cb));
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    border: 1px solid #737b8d;
-    -moz-box-shadow:
-        0px 5px 5px rgba(000,000,000,0.1),
-        inset 0px 1px 0px rgba(255,255,255,0.5);
-    -webkit-box-shadow:
-        0px 5px 5px rgba(000,000,000,0.1),
-        inset 0px 1px 0px rgba(255,255,255,0.5);
-    box-shadow:
-        0px 5px 5px rgba(000,000,000,0.1),
-        inset 0px 1px 0px rgba(255,255,255,0.5);
-    text-shadow:
-        0px 1px 3px rgba(000,000,000,0.3),
-        0px 0px 0px rgba(255,255,255,0);
-    display: table;
-    position: static;
-    clear: both;
+
+.submit {
+  width          : 100%;
+  margin-top     : 20px;
+  margin-bottom  : 2px;
+  padding        : 5px 0;
+  color          : #fff;
+  font-size      : 14px;
+  font-weight    : 500;
+  letter-spacing : 1px;
+  text-align     : center;
+  text-decoration: none;
+  background     : -moz-linear-gradient(top,
+      #b9c5dd 0%,
+      #a4b0cb);
+  background: -webkit-gradient(linear, left top, left bottom,
+      from(#b9c5dd),
+      to(#a4b0cb));
+  -moz-border-radius   : 5px;
+  -webkit-border-radius: 5px;
+  border-radius        : 5px;
+  border               : 1px solid #737b8d;
+  -moz-box-shadow      :
+    0px 5px 5px rgba(000, 000, 000, 0.1),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.5);
+  -webkit-box-shadow:
+    0px 5px 5px rgba(000, 000, 000, 0.1),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.5);
+  box-shadow:
+    0px 5px 5px rgba(000, 000, 000, 0.1),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.5);
+  text-shadow:
+    0px 1px 3px rgba(000, 000, 000, 0.3),
+    0px 0px 0px rgba(255, 255, 255, 0);
+  display : table;
+  position: static;
+  clear   : both;
 }
+
 .submit:hover {
-  background: -moz-linear-gradient(
-      top,
+  background: -moz-linear-gradient(top,
       #a4b0cb 0%,
       #b9c5dd);
-  background: -webkit-gradient(
-      linear, left top, left bottom, 
+  background: -webkit-gradient(linear, left top, left bottom,
       from(#a4b0cb),
       to(#b9c5dd));
 }
