@@ -3,16 +3,23 @@ import user from '../components/assets/img/user.png';
 import {Link} from "react-router-dom";
 import { Nav, Container, Navbar, NavDropdown } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { connect } from 'react-redux';
+import authActions from '../redux/actions/authActions';
 
 
 
-function NavBar() {
-  let logo =  <img src={user} width="40vw" />
+
+
+function NavBar(props) {
+  console.log(props)
+  const logo = props.user.pepe
+  ? <img className='logoUser' src={props.user.pepe.urlImage} width="40vw" />
+  : <img className='logoUser' src={user} width="40vw" />
   return (
 
     <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
       <Container>
-        <Navbar.Brand href="#home">MyTinerary</Navbar.Brand>
+        <Navbar.Brand>MyTinerary</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="me-auto">
@@ -24,10 +31,7 @@ function NavBar() {
 
            </div>
             <NavDropdown title={logo} id="collasible-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">SignUp</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">Login</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Exit</NavDropdown.Item>
+            {props.user.pepe ? <NavDropdown.Item className="nav2" onClick={() => props.logOut()}>LogOut</NavDropdown.Item> : <><NavDropdown.Item className="nav2" as={Link} to={"/register"}>Sign Up</NavDropdown.Item><NavDropdown.Item className="nav2" as={Link} to={"/singin"}>Login</NavDropdown.Item></>}
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
@@ -35,5 +39,13 @@ function NavBar() {
     </Navbar>
   );
 }
+const mapStateToProps = (state) => {
+  return {
+    user: state.authReducer.user,
+  };
+};
+const mapDispatchToProps = {
+  logOut: authActions.logOut
+};
 
-export default NavBar;
+export default connect(mapStateToProps,mapDispatchToProps)(NavBar);
