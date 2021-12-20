@@ -11,7 +11,7 @@ const authControllers = {
 
             const usuarioExiste = await User.findOne({email})
             if (usuarioExiste){
-                res.json({success: false, errores:[{messages:"The email user is already in use"}], response:null})
+                res.json({success: false, error:"The email user is already in use", response:null})
             }else{
 
                 password= bcryptjs.hashSync(password, 10)

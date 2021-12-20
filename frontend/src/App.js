@@ -28,8 +28,8 @@ const App = (props) => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Cities" element={<Cities />} />
-        <Route path="/city/:id" element={<City />} />
-        {props.user ? (<Route path="*" element={<Home />} />) : (<><Route path="/register" element={<Register />} /> <Route path="/singin" element={<SingIn />} /> </>)}
+        <Route path="/City/:id" element={<City />} />
+        {props.token ? (<Route path="*" element={<Home />} />) : (<><Route path="/register" element={<Register />} /> <Route path="/singin" element={<SingIn />} /> </>)}
       </Routes>
       <ToastContainer
         position="top-right"
@@ -48,7 +48,7 @@ const App = (props) => {
 }
 const mapStateToProps = (state) => {
   return {
-    user: state.authReducer.user
+    token: state.authReducer.token
   };
 };
 

@@ -14,7 +14,18 @@ const authActions = {
                     dispatch({ type: 'user', payload: user.data.response })
                 } else {
                     console.error(user.data.response)
-                    return { errores: user.data.errores };
+                    const error = user.data.error
+                    if (user.data.error) {
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'error',
+                            title: error,
+                            showConfirmButton: true,
+                            timer: 1500
+                        })
+                    } else {
+                        return { errores: user.data.errores };
+                    }
                 }
             } catch (error) { }
         };
@@ -51,7 +62,7 @@ const authActions = {
                 confirmButtonText: 'Cool'
             })
             dispatch({ type: 'logOut', payload: {} })
-            localStorage.removeItem("token","userLogged")
+            localStorage.removeItem("token", "userLogged")
         }
     },
     logInLS: (token) => {
