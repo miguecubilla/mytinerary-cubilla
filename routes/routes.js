@@ -2,13 +2,15 @@ require("../config/database")
 const Router = require('express').Router();
 const citiesControllers = require('../controllers/citiesControllers');
 const itineraryControllers = require('../controllers/itineraryControllers')
+const activitiesControllers = require("../controllers/activitiesControllers");
 const validator = require('../config/validator')
 const authControllers = require('../controllers/usersControllers')
 const passport = require('../config/passport')
 
 const { getItineraries, getItinerary, getItineraryCity, postItinerary, deleteItinerary,likeDislikeItinerary, modificarUnItinerary,controlComment } = itineraryControllers
-const { obtenerCities, postCities, obtenerUnaCity, deleteCity, modificarUnaCity } = citiesControllers
-const { newUser, loginAccount, tokenVerification } = authControllers
+const { obtenerCities, postCities, obtenerUnaCity, deleteCity, modificarUnaCity } = citiesControllers;
+const { newUser, loginAccount, tokenVerification } = authControllers;
+const { addActivity, getActivitiesOfOneItinerary } = activitiesControllers;
 
 
 //rutas de ciudades
@@ -49,5 +51,10 @@ Router.route("/itinerary/like/:id")
 Router.route("/comments/:id")
     .put(passport.authenticate("jwt", { session: false }), controlComment)
 
+Router.route("/activities/:itineraryId")
+    .get(getActivitiesOfOneItinerary);
+    
+Router.route("/activities")
+    .post(addActivity);
 
 module.exports = Router;

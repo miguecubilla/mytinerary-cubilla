@@ -20,7 +20,7 @@ const App = (props) => {
       props.logInLS(localStorage.getItem("token"))
     }
   }, []) 
-  console.log(props)
+  
   return (
     <BrowserRouter>
 

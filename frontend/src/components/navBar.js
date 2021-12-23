@@ -11,7 +11,7 @@ import authActions from '../redux/actions/authActions';
 
 
 function NavBar(props) {
-  console.log(props)
+  
   const logo = props.token
   ? <img className='logoUser' src={props.urlImage} width="40vw" />
   : <img className='logoUser' src={user} width="40vw" />

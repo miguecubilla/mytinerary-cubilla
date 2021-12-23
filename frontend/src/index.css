@@ -221,8 +221,28 @@ html * {
 }
 
 .cardCity {
-  color: white;
+  text-align           : center;
+  background           : linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
+  color                : rgb(248, 247, 247);
+  font-family          : 'Roboto';
+  font-weight          : 300;
+  font-size            : 40pt;
+  border-radius        : 10px;
+  background-position-x: center;
+  background-position-y: center;
+  overflow             : hidden;
+  text-shadow          : 5px 7px 10px black;
+  background-size      : cover;
 }
+
+.divEnjoy {
+  background-color: rgba(0, 0, 0, 0.226);
+  display         : inline-block;
+  overflow        : hidden;
+  white-space     : nowrap;
+}
+
+
 
 .text-center {
   width : 100% !important;
@@ -343,4 +363,171 @@ html * {
   background: -webkit-gradient(linear, left top, left bottom,
       from(#a4b0cb),
       to(#b9c5dd));
+}
+
+.itinerarioContenedor {
+  margin       : 50px auto 0;
+  width        : 60%;
+  border-radius: 4px;
+}
+
+@media screen and (max-width:700px) {
+  .itinerarioContenedor {
+
+    width: 90%;
+
+  }
+}
+
+.iconoItinerarios {
+  background: none;
+  float     : left;
+  height    : 100%;
+  width     : 35%;
+  min-width : 100px;
+  position  : relative;
+  padding   : 1rem;
+}
+
+.media-body {
+  background-color: rgb(197, 132, 12);
+  float           : left;
+  height          : 100%;
+  padding         : 12px 15px;
+  position        : relative;
+  width           : 65%;
+  border-radius   : 4px;
+}
+
+.cardCity2 {
+  text-align           : center;
+  background           : linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
+  color                : rgb(248, 247, 247);
+  font-family          : 'Roboto';
+  font-weight          : 300;
+  font-size            : 40pt;
+  border-radius        : 10px;
+  background-position-x: center;
+  background-position-y: center;
+  height               : 30vh;
+  border-style         : groove;
+  overflow             : visible;
+  text-shadow          : 5px 7px 10px black;
+  padding-top          : 1rem;
+  margin-top           : 2rem;
+  background-size      : cover;
+}
+
+.cardActivity {
+  text-align       : center;
+  background       : linear-gradient(141deg, #ccc 25%, #eee 40%, #ddd 55%);
+  color            : rgb(248, 247, 247);
+  font-family      : 'Roboto';
+  font-weight      : 300;
+  font-size        : 10pt;
+  border-radius    : 10px;
+  background-repeat: no-repeat;
+  background-size  : cover;
+  max-height       : 300px;
+  max-width        : 300px;
+  width            : 30vh;
+  height           : 20vh;
+  border-style     : groove;
+  overflow         : visible;
+  text-shadow      : 5px 7px 10px black;
+  padding-top      : 1rem;
+  margin-top       : 2rem;
+  object-fit       : cover;
+}
+
+@media screen and (max-width:1560px) {
+  .cardActivity {
+    width : 25vh;
+    height: 15vh;
+  }
+}
+
+@media screen and (max-width:1396px) {
+  .cardActivity {
+    width : 20vh;
+    height: 10vh;
+  }
+}
+
+@media screen and (max-width:1140px) {
+  .cardActivity {
+    width : 15vh;
+    height: 10vh;
+  }
+}
+
+@media screen and (max-width:860px) {
+  .cardActivity {
+    width : 13vh;
+    height: 10vh;
+  }
+}
+
+@media screen and (max-width:748px) {
+  .cardActivity {
+    width : 35vh;
+    height: 20vh;
+  }
+}
+
+.activitiesCards {
+  display: flex;
+
+  justify-content: space-between;
+
+}
+
+.activity {
+  display        : flex;
+  width          : 100%;
+  justify-content: space-around;
+
+}
+
+@media screen and (max-width:748px) {
+  .activity {
+
+    flex-direction: column;
+
+  }
+}
+
+.nombreGuia {
+  font-size: 2rem;
+
+}
+
+@media screen and (max-width:573px) {
+  .nombreGuia {
+    font-size: 1.5rem;
+  }
+}
+
+.profilePic {
+  width        : 20%;
+  border-radius: 50%;
+}
+
+.textArea {
+  display         : flex;
+  justify-content : space-around;
+  align-items     : center;
+  border-radius   : 4px;
+  background-color: rgb(216, 134, 12);
+  margin-top      : 6px;
+}
+
+.nameAndComment {
+  display        : flex;
+  flex-direction : column;
+  justify-content: space-between;
+  width          : 80%;
+}
+.cursor{
+  cursor: pointer;
 }

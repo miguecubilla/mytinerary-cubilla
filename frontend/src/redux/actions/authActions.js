@@ -38,7 +38,7 @@ const authActions = {
                     localStorage.setItem('token', user.data.response.token)
                     dispatch({ type: 'user', payload: user.data.response })
                 } else {
-                    console.log(user.data)
+                    
                     const error = user.data.error
                     Swal.fire({
                         position: 'top-end',

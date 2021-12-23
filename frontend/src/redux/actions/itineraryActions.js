@@ -23,12 +23,12 @@ const itineraryActions = {
         }
     }
 },
-addComment: (itineraryId, comment, token) => {
+addComment: (itineraryId, comment, token, urlImage, name) => {
     return async () => {
         try {
-            let response = await axios.put(`http://localhost:4000/api/comments/${itineraryId}`, {comment, type: "addComment"},
+            let response = await axios.put(`http://localhost:4000/api/comments/${itineraryId}`, {comment, urlImage, name, type: "addComment"},
             {headers: {
-                Authorization: "Bearer "+token
+                Authorization: "Bearer "+ token
                 }
             })
             if (response.data.success) {
@@ -67,6 +67,20 @@ deleteComment: (itineraryId, commentId, token) => {
         }
     }
 }, 
+getActivitiesByItinerary: (itineraryId) => {
+    return async (dispatch, getState) => {
+        try {
+            let response = await axios.get(`http://localhost:4000/api/activities/${itineraryId}`)
+            let data = response.data.response
+            return data
+        } catch (error){
+            return {
+                success: false, response: error
+            }
+        }
+    }
+
+},
 
 editComment: (commentId, comment, token) => {
     return async () => {

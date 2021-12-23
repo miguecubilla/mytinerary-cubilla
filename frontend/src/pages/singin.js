@@ -37,7 +37,7 @@ const SignIn = (props) => {
 
     };
     const responseGoogle = (res) => {
-        console.log(res);
+       
         let googleUser = {
             email: res.profileObj.email,
             password: res.profileObj.googleId,

@@ -5,7 +5,7 @@ import { Card, Button, Alert } from 'bootstrap-4-react/lib/components';
 import { connect } from 'react-redux'
 import citiesActions from "../redux/actions/citiesAction.js";
 import itineraryActions from '../redux/actions/itineraryActions';
-import Accordion from 'react-bootstrap/Accordion'
+import Logo1 from '../components/assets/img/logo1.png'
 import Itinerary from './itinerary'
 
 
@@ -15,28 +15,30 @@ const City = (props) => {
 
 
     useEffect(() => {
-        props.getOneCity(id)
-        props.getItinerary(id)
+        props.getOneCity(id);
+        props.getItinerary(id);
 
     }, [])
 
-    console.log(props)
+    
 
 
 
     return (
         <div className="container-fluid" align="center">
-            <div className="cardCity">
-                <img className="imgCity" src={props.oneCity.image} />
-                <Alert warning><h2>Enjoy {props.oneCity.name}</h2></Alert>
-            </div>
-            {props.itinerary.length !== 0 ? 
-            props.itinerary.map((itineraries) => <Itinerary Itineraries={itineraries} key={itineraries.id}/>): <h1 className="sinItinerarios">
-            there are no itineraries for this city
-          </h1>
+            <div className="cardCity" style={{ backgroundImage: `url("${props.oneCity.image}")` }}>
+            <img width="20%" src={Logo1} />
+                <div clasName="divEnjoy">Enjoy the amazing {props.oneCity.name}</div>
                
-            
-          }
+                
+            </div>
+            {props.itinerary.length !== 0 ?
+                props.itinerary.map((itineraries) => <Itinerary Itineraries={itineraries} key={itineraries.id} />) : <h1 className="sinItinerarios">
+                    there are no itineraries for this city
+                </h1>
+
+
+            }
             <Link to="/cities" ><Button secondary lg className="backCities">Back to cities</Button></Link>
         </div>
     )

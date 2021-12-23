@@ -11,7 +11,9 @@ const itinerarySchema = new mongoose.Schema({
     likes:{type:Array},
     comments:  [{
         comment: {type: String},
-        userId: {type: mongoose.Types.ObjectId, ref: "persona"},
+        userId: {type: mongoose.Types.ObjectId, ref: "user"},
+        urlImage: {type: String},
+        name: {type: String}
     }],
 })
 

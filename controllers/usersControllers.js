@@ -6,7 +6,7 @@ const authControllers = {
 
     newUser: async(req, res) => {
         let {name,lastName,country, email, password,urlImage,google} = req.body;    
-        console.log(req.body)
+        
         try {
 
             const usuarioExiste = await User.findOne({email})
@@ -27,7 +27,7 @@ const authControllers = {
                 })
 
                 const token = jwt.sign({ ...nuevoUsuario }, process.env.SECRET_KEY);
-                console.log(token)
+               
                 await nuevoUsuario.save()
                 res.json({success: true, response: {token,nuevoUsuario}, error: null})
             }
@@ -38,7 +38,7 @@ const authControllers = {
     },
     loginAccount: async(req,res) =>{
         const {email,password,google} = req.body
-        console.log(req.body)
+        
         try{
             const usuarioExiste = await User.findOne({email})
             if (!usuarioExiste){

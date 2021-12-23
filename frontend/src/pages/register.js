@@ -252,7 +252,7 @@ const Register = (props) => {
 
     };
     const responseGoogle = (res) => {
-        console.log(res);
+        
         let googleUser = {
             name: res.profileObj.givenName,
             lastName: res.profileObj.familyName,
