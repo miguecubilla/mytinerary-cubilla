@@ -2,7 +2,7 @@ const passport = require('passport')
 const jwtStrategy = require('passport-jwt').Strategy
 const extractJwt = require('passport-jwt').ExtractJwt
 
-const User = require('../models/users')
+const User = require('../models/Users')
 
 module.exports = passport.use(new jwtStrategy({
     jwtFromRequest: extractJwt.fromAuthHeaderAsBearerToken(),
