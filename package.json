@@ -26,7 +26,7 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "webpack-dev-server --mode development --hot --open --port $PORT"
   },
   "repository": {
     "type": "git",
