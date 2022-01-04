@@ -1,4 +1,4 @@
-const Activity = require('../models/activity')
+const Activity = require('../models/Activity')
 
 const activitiesControllers = {
     addActivity: async (req, res) => {
